@@ -6,10 +6,6 @@ searchInput.addEventListener("input", () => {
 
     boxes.forEach(box => {
         const productName = box.querySelector(".mars").textContent.toLowerCase();
-        if (productName.includes(query)) {
-            box.style.display = "block";
-        } else {
-            box.style.display = "none";
-        }
+        box.style.display = productName.includes(query) ? "block" : "none";
     });
 });
